@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/empresa', 'EmpresaController@guardarEmpresa');
+Route::get('/empresa', 'EmpresaController@listarEmpresa');
+Route::put('/empresa/{nit}', 'EmpresaController@actualizarEmpresa');
+Route::delete('/empresa/{nit}', 'EmpresaController@eliminarEmpresa');
