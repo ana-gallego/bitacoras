@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrearTablaEmpresa extends Migration
+class TblFuncionario extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CrearTablaEmpresa extends Migration
      */
     public function up()
     {
-         Schema::create('tblEmpresa', function (Blueprint $table) {
-            $table->string('nit');
+         Schema::create('tblFuncionario', function (Blueprint $table) {
+            $table->string('documento');
             $table->string('nombre');
-            $table->string('direccion');
+            $table->string('apellido');
             $table->string('telefono');
             $table->string('correo'); 
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -31,6 +30,7 @@ class CrearTablaEmpresa extends Migration
      */
     public function down()
     {
-         Schema::drop('tblEmpresa');
+         Schema::drop('tblFuncionario');
+       
     }
 }

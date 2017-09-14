@@ -5,7 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Empresa extends Model
-{	protected $fillable =['nit','nombre','direccion','telefono','correo'];
+{	
+	protected $fillable =['nit','nombre','direccion','telefono','correo'];
    	protected $table ='tblEmpresa';
    	protected $primaryKey = 'nit';
 

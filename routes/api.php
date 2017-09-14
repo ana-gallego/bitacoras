@@ -12,8 +12,14 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+	// -- -- -- EMPRESA -- -- --//
 Route::post('/empresa', 'EmpresaController@guardarEmpresa');
 Route::get('/empresa', 'EmpresaController@listarEmpresa');
 Route::put('/empresa/{nit}', 'EmpresaController@actualizarEmpresa');
 Route::delete('/empresa/{nit}', 'EmpresaController@eliminarEmpresa');
+
+	// -- -- -- FUNCIONARIO -- -- --//
+Route::post('/funcionario', 'FuncionarioController@guardarFuncionario');
+Route::get('/funcionario', 'FuncionarioController@listarFuncionario');
+Route::put('/funcionario/{documento}', 'FuncionarioController@actualizarFuncionario');
+Route::delete('/funcionario/{documento}', 'FuncionarioController@eliminarFuncionario');
